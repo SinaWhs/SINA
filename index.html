@@ -1,28 +1,103 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello Sina</title>
+    <title>Portfolio | Sina Haghshenas</title>
     <style>
         body {
             margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(135deg, #1d2671, #c33764);
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
         }
 
-        h1 {
-            color: white;
-            font-size: 48px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #475569;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        section h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #2563eb;
+        }
+
+        .info p {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #64748b;
         }
     </style>
 </head>
 <body>
-    <h1>Hello, I am Sina</h1>
+
+<div class="container">
+
+    <header>
+        <h1>Sina Haghshenas</h1>
+        <p>Computer Engineering Student</p>
+    </header>
+
+    <section class="info">
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> Sina Haghshenas</p>
+        <p><strong>Age:</strong> 22</p>
+        <p><strong>Education:</strong> B.Sc. Student in Computer Engineering</p>
+    </section>
+
+    <section>
+        <h2>Courses & Skills</h2>
+        <ul>
+            <li>CompTIA A+</li>
+            <li>CompTIA Network+</li>
+            <li>Linux Fundamentals</li>
+        </ul>
+    </section>
+
+    <footer>
+        © 2026 | Sina Haghshenas — Portfolio
+    </footer>
+
+</div>
+
 </body>
 </html>
