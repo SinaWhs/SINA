@@ -3,41 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio | Sina Haghshenas</title>
+
     <style>
         body {
             margin: 0;
             font-family: "Segoe UI", Arial, sans-serif;
-            background-color: #f8fafc;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
             color: #0f172a;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         header h1 {
-            font-size: 40px;
+            font-size: 44px;
             margin-bottom: 10px;
         }
 
         header p {
             font-size: 18px;
             color: #475569;
+            margin-bottom: 25px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 26px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-2px);
         }
 
         section {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background-color: white;
+            padding: 35px;
+            border-radius: 14px;
+            margin-bottom: 35px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
         }
 
         section h2 {
@@ -47,8 +74,8 @@
         }
 
         .info p {
-            margin: 8px 0;
             font-size: 16px;
+            margin: 8px 0;
         }
 
         ul {
@@ -62,19 +89,26 @@
 
         footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
             font-size: 14px;
             color: #64748b;
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
+<div class="container" id="resume">
 
     <header>
         <h1>Sina Haghshenas</h1>
         <p>Computer Engineering Student</p>
+
+        <div class="buttons">
+            <button class="btn btn-primary" id="downloadBtn">
+                Download Resume
+            </button>
+        </div>
     </header>
 
     <section class="info">
@@ -94,10 +128,27 @@
     </section>
 
     <footer>
-        © 2026 | Sina Haghshenas — Portfolio
+        © 2026 | Sina Haghshenas — Professional Portfolio
     </footer>
 
 </div>
+
+<!-- html2canvas -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<script>
+document.getElementById("downloadBtn").addEventListener("click", function () {
+    html2canvas(document.getElementById("resume"), {
+        scale: 2,
+        useCORS: true
+    }).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "Sina_Haghshenas_Resume.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+    });
+});
+</script>
 
 </body>
 </html>
